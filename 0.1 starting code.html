@@ -5,5 +5,10 @@ and this is how we make AR app with about 10 line of codes
 <script src="htttps://aframe.io/releaases/0.5.0/aframe.main.js"></script>
 <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe-ar.js"</script>
 <script>THREEx.ArToolkitContext.baseURL='https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
-<body>
+<body style='margin : 0px; overflow: hidden;'>
+  <!-- we add this code to the body so it display and show what the ar will have to find  -->
+  <a-scene embedded artoolkit='sourceType: webcam;'>
+  <a-box postion='0 0.5 0' material='opacity: 0.5;'><a-box>
+  <a-marker-camera preset='hiro'><a/marker-camera>
+  </a-scene>
 </body>
