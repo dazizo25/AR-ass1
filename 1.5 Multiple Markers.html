@@ -7,14 +7,17 @@
   </head>
   
   <body>
+	  <!-- this code is to load the marker, look of it and act as the base for the AR-->
 		<a-scene mindar-image="imageTargetSrc: ./targets-testing-multiple.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights">
 			<a-assets>
+	  <!-- this display the 3d modle of a bare and a raccon model using a link insed of being in my files  -->
 		<a-asset-item id="bearModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/band-example/bear/scene.gltf"></a-asset-item>
-				<a-asset-item id="sign" src="./sign2.glb"></a-asset-item>
+       		<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.0/examples/image-tracking/assets/band-example/raccoon/scene.gltf"></a-asset-item>
 			</a-assets>
 		<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+		<!-- this  code controles the postioning and the location both model are displayed at-->
 			<a-entity mindar-image-target="targetIndex: 0">
-				<a-gltf-model rotation="0 270 0" position="0 -0.5 0.1" scale="0.25 0.25 0.25" src="#sign">
+				<a-gltf-model rotation="0 270 0" position="0 -0.5 0.1" scale="0.25 0.25 0.25" src="#raccoonModel">
 			</a-entity>
 			<a-entity mindar-image-target="targetIndex: 1">
 				<a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.05 0.05 0.05" src="#bearModel" animation-mixer>
